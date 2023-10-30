@@ -1,0 +1,736 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta> <reloc>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/simulation/production\PICGame.X.production.o
+cinit CODE 0 F F E 2 1
+idloc IDLOC 5 2000 2000 4 2 1
+text1 CODE 0 342 342 19 2 1
+text2 CODE 0 388 388 13 2 1
+text3 CODE 0 39B 39B 10 2 1
+text4 CODE 0 3C9 3C9 D 2 1
+text5 CODE 0 327 327 1B 2 1
+text6 CODE 0 3E3 3E3 9 2 1
+text7 CODE 0 2AC 2AC 2A 2 1
+text8 CODE 0 3F4 3F4 6 2 1
+text9 CODE 0 373 373 15 2 1
+text10 CODE 0 3FA 3FA 5 2 1
+text11 CODE 0 1E0 1E0 50 2 1
+text12 CODE 0 3BA 3BA F 2 1
+text13 CODE 0 27C 27C 30 2 1
+text14 CODE 0 2FF 2FF 28 2 1
+text15 CODE 0 230 230 4C 2 1
+text16 CODE 0 3D6 3D6 D 2 1
+text17 CODE 0 35B 35B 18 2 1
+idataEEDATA EEDATA 3 0 2100 45 2 1
+maintext CODE 0 1D 1D 1C3 2 1
+cstackCOMMON COMMON 1 70 70 B 1 1
+cstackBANK0 BANK0 1 4B 4B 15 1 1
+inittext CODE 0 3AB 3AB F 2 1
+intentry CODE 0 4 4 A 2 1
+bssBANK0 BANK0 1 20 20 2B 1 1
+bssBANK1 BANK1 1 A0 A0 22 1 1
+strings STRING 0 2D6 2D6 29 2 1
+clrtext CODE 0 3EC 3EC 8 2 1
+bssCOMMON COMMON 1 7B 7B 3 1 1
+config CONFIG 4 2007 2007 1 2 1
+$C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_13.o
+idloc IDLOC 5 2000 2000 4 2 1
+reset_vec CODE 0 0 0 1 2 1
+end_init CODE 0 E E 1 2 1
+config CONFIG 4 2007 2007 1 2 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-6F 1
+RAM C2-EF 1
+RAM 120-14F 1
+BANK0 60-6F 1
+BANK1 C2-EF 1
+BANK2 120-14F 1
+CONST 1-3 2
+CONST 3FF-3FF 2
+ENTRY 1-3 2
+ENTRY 3FF-3FF 2
+CODE 1-3 2
+CODE 3FF-3FF 2
+SFR0 0-1F 1
+SFR1 80-9F 1
+SFR2 100-11F 1
+SFR3 180-1EF 1
+EEDATA 2145-217F 2
+STRCODE 1-3 2
+STRCODE 3FF-3FF 2
+STRING 1-3 2
+STRING 3FF-3FF 2
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/simulation/production\PICGame.X.production.o
+F cinit CODE >636:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+F cinit CODE >639:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+F cinit CODE >749:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+10 cinit CODE >750:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+11 cinit CODE >751:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+12 cinit CODE >752:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+13 cinit CODE >753:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+14 cinit CODE >756:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+15 cinit CODE >757:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+16 cinit CODE >758:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+17 cinit CODE >759:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+18 cinit CODE >762:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+19 cinit CODE >763:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+1A cinit CODE >764:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+1B cinit CODE >770:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+1B cinit CODE >772:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+1C cinit CODE >773:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+4 intentry CODE >295:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+35B text17 CODE >17:C:\Users\feher\MPLABXProjects\PICGame.X\keybrd.c
+35C text17 CODE >19:C:\Users\feher\MPLABXProjects\PICGame.X\keybrd.c
+35D text17 CODE >21:C:\Users\feher\MPLABXProjects\PICGame.X\keybrd.c
+35F text17 CODE >22:C:\Users\feher\MPLABXProjects\PICGame.X\keybrd.c
+361 text17 CODE >23:C:\Users\feher\MPLABXProjects\PICGame.X\keybrd.c
+363 text17 CODE >24:C:\Users\feher\MPLABXProjects\PICGame.X\keybrd.c
+365 text17 CODE >25:C:\Users\feher\MPLABXProjects\PICGame.X\keybrd.c
+367 text17 CODE >26:C:\Users\feher\MPLABXProjects\PICGame.X\keybrd.c
+369 text17 CODE >31:C:\Users\feher\MPLABXProjects\PICGame.X\keybrd.c
+36D text17 CODE >33:C:\Users\feher\MPLABXProjects\PICGame.X\keybrd.c
+372 text17 CODE >34:C:\Users\feher\MPLABXProjects\PICGame.X\keybrd.c
+3D6 text16 CODE >353:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3D7 text16 CODE >356:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3DA text16 CODE >359:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3DC text16 CODE >360:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3DF text16 CODE >361:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3E2 text16 CODE >362:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+230 text15 CODE >295:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+230 text15 CODE >304:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+232 text15 CODE >305:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+233 text15 CODE >308:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+237 text15 CODE >312:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+23A text15 CODE >313:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+23C text15 CODE >316:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+243 text15 CODE >317:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+246 text15 CODE >320:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+24B text15 CODE >323:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+24D text15 CODE >323:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+252 text15 CODE >324:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+254 text15 CODE >325:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+256 text15 CODE >326:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+258 text15 CODE >327:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+25C text15 CODE >332:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+260 text15 CODE >333:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+267 text15 CODE >336:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+26A text15 CODE >338:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+26D text15 CODE >339:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+26F text15 CODE >340:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+270 text15 CODE >342:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+271 text15 CODE >346:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+2FF text14 CODE >54:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+2FF text14 CODE >57:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+305 text14 CODE >58:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+308 text14 CODE >59:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+309 text14 CODE >61:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+30E text14 CODE >64:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+310 text14 CODE >65:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+311 text14 CODE >67:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+316 text14 CODE >69:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+317 text14 CODE >70:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+318 text14 CODE >72:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+31B text14 CODE >73:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+31C text14 CODE >74:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+31F text14 CODE >75:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+320 text14 CODE >76:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+325 text14 CODE >78:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+326 text14 CODE >79:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+27C text13 CODE >27:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+27D text13 CODE >28:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+282 text13 CODE >31:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+284 text13 CODE >32:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+285 text13 CODE >33:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+28A text13 CODE >33:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+28D text13 CODE >33:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+293 text13 CODE >34:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+294 text13 CODE >35:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+297 text13 CODE >37:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+298 text13 CODE >38:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+299 text13 CODE >41:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+29C text13 CODE >42:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+29D text13 CODE >43:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+2A6 text13 CODE >44:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+2A7 text13 CODE >45:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+2AA text13 CODE >48:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+2AB text13 CODE >49:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+3BA text12 CODE >96:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+3BB text12 CODE >97:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+3BF text12 CODE >97:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+3C2 text12 CODE >97:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+3C8 text12 CODE >98:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+1E0 text11 CODE >140:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+1E0 text11 CODE >142:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+1E2 text11 CODE >144:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+1E7 text11 CODE >145:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+1E9 text11 CODE >147:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+1EB text11 CODE >149:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+1F5 text11 CODE >151:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+1F8 text11 CODE >152:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+1FC text11 CODE >153:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+1FD text11 CODE >154:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+1FE text11 CODE >155:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+201 text11 CODE >156:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+206 text11 CODE >158:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+207 text11 CODE >159:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+208 text11 CODE >162:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+20B text11 CODE >163:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+20F text11 CODE >164:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+210 text11 CODE >165:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+211 text11 CODE >166:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+214 text11 CODE >168:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+215 text11 CODE >171:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+218 text11 CODE >175:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+21B text11 CODE >176:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+228 text11 CODE >178:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+22C text11 CODE >179:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+22F text11 CODE >180:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+3FA text10 CODE >117:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+3FB text10 CODE >118:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+3FC text10 CODE >119:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+3FE text10 CODE >120:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+373 text9 CODE >106:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+373 text9 CODE >107:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+379 text9 CODE >107:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+37B text9 CODE >108:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+383 text9 CODE >108:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+387 text9 CODE >107:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+3F4 text8 CODE >86:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+3F5 text8 CODE >87:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+3F9 text8 CODE >88:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+2AC text7 CODE >6:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+2AD text7 CODE >8:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+2AF text7 CODE >10:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+2B2 text7 CODE >11:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+2B6 text7 CODE >12:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+2BC text7 CODE >13:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+2BF text7 CODE >15:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+2C3 text7 CODE >17:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+2C4 text7 CODE >18:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+2D0 text7 CODE >19:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+2D5 text7 CODE >12:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+3E3 text6 CODE >104:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+3E4 text6 CODE >107:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+3EA text6 CODE >108:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+3EB text6 CODE >109:C:\Program Files\Microchip\xc8\v2.41\pic\sources\c90\pic\__eeprom.c
+327 text5 CODE >128:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+328 text5 CODE >129:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+32B text5 CODE >129:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+32E text5 CODE >129:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+330 text5 CODE >129:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+333 text5 CODE >131:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+335 text5 CODE >133:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+33C text5 CODE >134:C:\Users\feher\MPLABXProjects\PICGame.X\lcd_hd44780.c
+3C9 text4 CODE >353:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3CA text4 CODE >356:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3CD text4 CODE >359:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3CF text4 CODE >360:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3D2 text4 CODE >361:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3D5 text4 CODE >362:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+39B text3 CODE >73:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+39C text3 CODE >74:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3A2 text3 CODE >75:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3A6 text3 CODE >76:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3AA text3 CODE >74:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+388 text2 CODE >391:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+388 text2 CODE >394:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+38A text2 CODE >396:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+38D text2 CODE >399:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+390 text2 CODE >403:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+392 text2 CODE >407:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+394 text2 CODE >412:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+396 text2 CODE >413:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+398 text2 CODE >414:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+39A text2 CODE >415:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+342 text1 CODE >369:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+342 text1 CODE >371:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+346 text1 CODE >372:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+348 text1 CODE >373:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+34A text1 CODE >377:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+34F text1 CODE >379:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+351 text1 CODE >381:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+353 text1 CODE >381:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+355 text1 CODE >382:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+357 text1 CODE >385:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+35A text1 CODE >386:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1D maintext CODE >83:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1D maintext CODE >86:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1E maintext CODE >88:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+20 maintext CODE >90:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+2A maintext CODE >91:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+2F maintext CODE >92:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+34 maintext CODE >93:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+35 maintext CODE >96:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+36 maintext CODE >99:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3A maintext CODE >100:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3E maintext CODE >101:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+42 maintext CODE >102:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+46 maintext CODE >103:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+4A maintext CODE >104:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+4E maintext CODE >106:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+4F maintext CODE >107:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+52 maintext CODE >110:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+54 maintext CODE >116:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+59 maintext CODE >117:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+5E maintext CODE >118:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+62 maintext CODE >119:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+67 maintext CODE >123:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+6C maintext CODE >125:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+6C maintext CODE >130:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+79 maintext CODE >131:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+7C maintext CODE >132:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+7F maintext CODE >134:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+81 maintext CODE >137:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+86 maintext CODE >144:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+87 maintext CODE >145:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+8A maintext CODE >146:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+92 maintext CODE >147:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+93 maintext CODE >148:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+A0 maintext CODE >150:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+A5 maintext CODE >151:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+AA maintext CODE >152:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+AE maintext CODE >154:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+B1 maintext CODE >158:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+B3 maintext CODE >158:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+B5 maintext CODE >159:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+B7 maintext CODE >161:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+BA maintext CODE >162:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+C0 maintext CODE >165:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+C5 maintext CODE >138:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+C7 maintext CODE >138:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+CA maintext CODE >138:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+CD maintext CODE >177:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+CE maintext CODE >179:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+D0 maintext CODE >181:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+D6 maintext CODE >182:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+DB maintext CODE >183:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+E0 maintext CODE >185:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+E2 maintext CODE >186:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+E3 maintext CODE >188:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+E8 maintext CODE >189:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+EA maintext CODE >193:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+EE maintext CODE >201:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+F0 maintext CODE >202:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+F1 maintext CODE >203:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+F4 maintext CODE >208:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+F4 maintext CODE >209:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+F6 maintext CODE >210:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+F7 maintext CODE >211:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+F7 maintext CODE >212:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+F9 maintext CODE >215:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+103 maintext CODE >216:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+108 maintext CODE >205:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+113 maintext CODE >205:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+116 maintext CODE >205:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+119 maintext CODE >216:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+11A maintext CODE >218:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+11D maintext CODE >219:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+121 maintext CODE >220:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+130 maintext CODE >221:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+135 maintext CODE >221:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+137 maintext CODE >221:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+13B maintext CODE >221:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+140 maintext CODE >222:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+143 maintext CODE >223:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+147 maintext CODE >224:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+149 maintext CODE >225:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+14D maintext CODE >226:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+14F maintext CODE >227:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+152 maintext CODE >227:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+154 maintext CODE >227:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+159 maintext CODE >227:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+15C maintext CODE >232:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+15F maintext CODE >233:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+164 maintext CODE >234:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+168 maintext CODE >235:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+16D maintext CODE >237:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+171 maintext CODE >238:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+173 maintext CODE >239:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+175 maintext CODE >240:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+177 maintext CODE >243:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+17A maintext CODE >244:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+17C maintext CODE >245:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+17D maintext CODE >247:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+17E maintext CODE >252:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+17F maintext CODE >253:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+180 maintext CODE >255:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+180 maintext CODE >256:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+182 maintext CODE >257:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+183 maintext CODE >247:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+185 maintext CODE >247:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+188 maintext CODE >247:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+18B maintext CODE >247:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+18E maintext CODE >260:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+191 maintext CODE >260:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+195 maintext CODE >260:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+19A maintext CODE >262:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+19E maintext CODE >265:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+19F maintext CODE >266:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1AA maintext CODE >267:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1B4 maintext CODE >265:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1BA maintext CODE >265:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1BC maintext CODE >271:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1BF maintext CODE >272:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1C2 maintext CODE >274:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1C3 maintext CODE >124:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1C5 maintext CODE >124:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1C8 maintext CODE >124:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1CB maintext CODE >285:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1CF maintext CODE >286:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+1D2 maintext CODE >288:C:\Users\feher\MPLABXProjects\PICGame.X\main.c
+3EC clrtext CODE >736:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3EC clrtext CODE >737:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3ED clrtext CODE >738:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3ED clrtext CODE >739:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3EE clrtext CODE >740:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3EF clrtext CODE >741:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3F0 clrtext CODE >742:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3F1 clrtext CODE >743:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3F2 clrtext CODE >744:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3F3 clrtext CODE >745:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3AB inittext CODE >708:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3AB inittext CODE >709:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3AC inittext CODE >710:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3AD inittext CODE >711:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3AE inittext CODE >712:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3AF inittext CODE >719:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3AF inittext CODE >720:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3B0 inittext CODE >721:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3B1 inittext CODE >722:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3B2 inittext CODE >723:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3B3 inittext CODE >724:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3B4 inittext CODE >725:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3B5 inittext CODE >726:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3B6 inittext CODE >727:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3B7 inittext CODE >728:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3B8 inittext CODE >729:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+3B9 inittext CODE >730:C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_1.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___latbits 0 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+__Hspace_0 3FF 0 ABS 0 - -
+__Hspace_1 C2 0 ABS 0 - -
+__Hspace_2 0 0 ABS 0 - -
+__Hspace_3 45 0 ABS 0 - -
+__Hspace_4 400F 0 ABS 0 - -
+i1__beep 7AC 0 CODE 0 text16 dist/simulation/production\PICGame.X.production.o
+isr@_col 78 0 COMMON 1 cstackCOMMON dist/simulation/production\PICGame.X.production.o
+isr@_key 7A 0 COMMON 1 cstackCOMMON dist/simulation/production\PICGame.X.production.o
+isr@_row 79 0 COMMON 1 cstackCOMMON dist/simulation/production\PICGame.X.production.o
+_LCD_wr_custom_char 64E 0 CODE 0 text5 dist/simulation/production\PICGame.X.production.o
+__Heeprom_data 0 0 EEDATA 3 eeprom_data -
+__L__absolute__ 0 0 ABS 0 __absolute__ -
+main@i 5F 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+__Hstrings 0 0 ABS 0 strings -
+_T0IF 5A 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+_TMR0 1 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+_TMR2 11 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_13.o
+_init 710 0 CODE 0 text2 dist/simulation/production\PICGame.X.production.o
+_keys 20 0 BANK0 1 bssBANK0 dist/simulation/production\PICGame.X.production.o
+_main 3A 0 CODE 0 maintext dist/simulation/production\PICGame.X.production.o
+btemp 7E 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+__end_of_rand_tile 6B6 0 CODE 0 text1 dist/simulation/production\PICGame.X.production.o
+start 1C 0 CODE 0 init C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_13.o
+main@obstacle_hit 5C 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+rand_tile@res 51 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+__HbssCOMMON 0 0 ABS 0 bssCOMMON -
+_gameA_line_buf 3A 0 BANK0 1 bssBANK0 dist/simulation/production\PICGame.X.production.o
+LCD_set_cgram_addr@addr 4F 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+_LCD_init 3C0 0 CODE 0 text11 dist/simulation/production\PICGame.X.production.o
+_LCD_putc 7F4 0 CODE 0 text10 dist/simulation/production\PICGame.X.production.o
+_LCD_puts 6E6 0 CODE 0 text9 dist/simulation/production\PICGame.X.production.o
+__Hpowerup 0 0 CODE 0 powerup -
+_rand_tile 684 0 CODE 0 text1 dist/simulation/production\PICGame.X.production.o
+main@spd_cnt 58 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+__end_of_LCD_set_cgram_addr 7F4 0 CODE 0 text8 dist/simulation/production\PICGame.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_13.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_13.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_13.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_13.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_13.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_13.o
+__end_of_LCD_init 460 0 CODE 0 text11 dist/simulation/production\PICGame.X.production.o
+__end_of_LCD_putc 7FE 0 CODE 0 text10 dist/simulation/production\PICGame.X.production.o
+__end_of_LCD_puts 710 0 CODE 0 text9 dist/simulation/production\PICGame.X.production.o
+__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+__HdataEEDATA 0 0 ABS 0 dataEEDATA -
+clearstr@str 4B 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+wtemp0 7E 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+__Hfunctab 0 0 ENTRY 0 functab -
+__Hclrtext 0 0 ABS 0 clrtext -
+__pidataEEDATA 0 4200 EEDATA 3 idataEEDATA dist/simulation/production\PICGame.X.production.o
+LCD_init@i 51 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+_EECON1bits 9C 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+_LCD_set_cgram_addr 7E8 0 CODE 0 text8 dist/simulation/production\PICGame.X.production.o
+_CCPR1L 15 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+__LdataEEDATA 0 0 ABS 0 dataEEDATA -
+_EECON1 9C 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+_EEDATA 9A 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+i1__beep@PR2_val 71 0 COMMON 1 cstackCOMMON dist/simulation/production\PICGame.X.production.o
+__Lmaintext 0 0 ABS 0 maintext -
+_gameB_track A0 0 BANK1 1 bssBANK1 dist/simulation/production\PICGame.X.production.o
+__end_of___eetoc 7D8 0 CODE 0 text6 dist/simulation/production\PICGame.X.production.o
+_gameB_truckpos 38 0 BANK0 1 bssBANK0 dist/simulation/production\PICGame.X.production.o
+_INTCON B 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+kbd_eval@col 70 0 COMMON 1 cstackCOMMON dist/simulation/production\PICGame.X.production.o
+kbd_eval@row 72 0 COMMON 1 cstackCOMMON dist/simulation/production\PICGame.X.production.o
+_OPTION_REG 81 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_13.o
+___stacklo 0 0 ABS 0 - C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_13.o
+__beep@PR2_val 4C 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+_eeprom_keys 60 4200 EEDATA 3 idataEEDATA dist/simulation/production\PICGame.X.production.o
+__LidataEEDATA 0 0 ABS 0 idataEEDATA -
+start_initialization 1E 0 CODE 0 cinit dist/simulation/production\PICGame.X.production.o
+_kbd_eval 6B6 0 CODE 0 text17 dist/simulation/production\PICGame.X.production.o
+isr@key_col_select 7C 0 COMMON 1 bssCOMMON dist/simulation/production\PICGame.X.production.o
+LCD_wr_custom_char@code 53 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+__end_of_kbd_eval 6E6 0 CODE 0 text17 dist/simulation/production\PICGame.X.production.o
+clear_ram0 7D8 0 CODE 0 clrtext dist/simulation/production\PICGame.X.production.o
+__pcstackBANK0 4B 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+_LCD_gotoxy 774 0 CODE 0 text12 dist/simulation/production\PICGame.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_13.o
+LCD_wr_custom_char@cnt 54 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+__Hbank0 0 0 ABS 0 bank0 -
+__Hbank1 0 0 ABS 0 bank1 -
+__Hbank2 0 0 ABS 0 bank2 -
+__Hbank3 0 0 BANK3 1 bank3 -
+__Hcinit 3A 0 CODE 0 cinit -
+__Hidloc 4008 0 IDLOC 5 idloc -
+__Hstack 0 0 STACK 2 stack -
+__stringbase 5CA 0 STRING 0 strings dist/simulation/production\PICGame.X.production.o
+__Hmaintext 0 0 ABS 0 maintext -
+LCD_wrdata@data 4E 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+__Hcommon 0 0 ABS 0 common -
+__Hconfig 4010 0 CONFIG 4 config -
+___eetoc@addr 4F 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+___eetoc@data 50 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+__Lbank0 0 0 ABS 0 bank0 -
+__Lbank1 0 0 ABS 0 bank1 -
+__Lbank2 0 0 ABS 0 bank2 -
+__Lbank3 0 0 BANK3 1 bank3 -
+__Lcinit 1E 0 CODE 0 cinit -
+__Lidloc 0 0 IDLOC 5 idloc -
+__Lstack 0 0 STACK 2 stack -
+__Linittext 0 0 ABS 0 inittext -
+_PORTAbits 5 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+__Habs1 0 0 ABS 0 abs1 -
+__Hcode 0 0 ABS 0 code -
+__Hinit 1C 0 CODE 0 init -
+__Hsfr0 0 0 ABS 0 sfr0 -
+__Hsfr1 0 0 ABS 0 sfr1 -
+__Hsfr2 0 0 ABS 0 sfr2 -
+__Hsfr3 0 0 ABS 0 sfr3 -
+__Htext 0 0 ABS 0 text -
+__Labs1 0 0 ABS 0 abs1 -
+__Lcode 0 0 ABS 0 code -
+__Linit 1C 0 CODE 0 init -
+__Lsfr0 0 0 ABS 0 sfr0 -
+__Lsfr1 0 0 ABS 0 sfr1 -
+__Lsfr2 0 0 ABS 0 sfr2 -
+__Lsfr3 0 0 ABS 0 sfr3 -
+__Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
+__HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_LCD 32 0 BANK0 1 bssBANK0 dist/simulation/production\PICGame.X.production.o
+_PR2 92 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+__S0 3FF 0 ABS 0 - -
+__S1 C2 0 ABS 0 - -
+__S3 2145 0 ABS 0 - -
+_isr 460 0 CODE 0 text15 dist/simulation/production\PICGame.X.production.o
+_key 39 0 BANK0 1 bssBANK0 dist/simulation/production\PICGame.X.production.o
+LCD_wr_custom_char@dataarr 51 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+saved_w 7E 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+__end_of_LCD_gotoxy 792 0 CODE 0 text12 dist/simulation/production\PICGame.X.production.o
+_LCD_waitbf 5FE 0 CODE 0 text14 dist/simulation/production\PICGame.X.production.o
+_LCD_wrdata 4F8 0 CODE 0 text13 dist/simulation/production\PICGame.X.production.o
+_gameB_difficulty 36 0 BANK0 1 bssBANK0 dist/simulation/production\PICGame.X.production.o
+__HidataEEDATA 0 0 ABS 0 idataEEDATA -
+__end_of_isr 4F8 0 CODE 0 text15 dist/simulation/production\PICGame.X.production.o
+__Lintentry 8 0 CODE 0 intentry -
+__stringtab 5AC 0 STRING 0 strings dist/simulation/production\PICGame.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\feher\AppData\Local\Temp\xcAs8h0.\driver_tmp_13.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
+__LbssBANK1 0 0 ABS 0 bssBANK1 -
+LCD_waitbf@busy 4C 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+kbd_eval@key_ptr 71 0 COMMON 1 cstackCOMMON dist/simulation/production\PICGame.X.production.o
+LCD_gotoxy@x 51 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+LCD_gotoxy@y 4F 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+__ptext10 7F4 0 CODE 0 text10 dist/simulation/production\PICGame.X.production.o
+__ptext11 3C0 0 CODE 0 text11 dist/simulation/production\PICGame.X.production.o
+__ptext12 774 0 CODE 0 text12 dist/simulation/production\PICGame.X.production.o
+__ptext13 4F8 0 CODE 0 text13 dist/simulation/production\PICGame.X.production.o
+__ptext14 5FE 0 CODE 0 text14 dist/simulation/production\PICGame.X.production.o
+__ptext15 460 0 CODE 0 text15 dist/simulation/production\PICGame.X.production.o
+__ptext16 7AC 0 CODE 0 text16 dist/simulation/production\PICGame.X.production.o
+__ptext17 6B6 0 CODE 0 text17 dist/simulation/production\PICGame.X.production.o
+isr@kbd_skip_t0_cyc 7B 0 COMMON 1 bssCOMMON dist/simulation/production\PICGame.X.production.o
+___eetoc 7C6 0 CODE 0 text6 dist/simulation/production\PICGame.X.production.o
+__pmaintext 3A 0 CODE 0 maintext dist/simulation/production\PICGame.X.production.o
+__Lcommon 0 0 ABS 0 common -
+__Lconfig 0 0 CONFIG 4 config -
+__Hinittext 0 0 ABS 0 inittext -
+__end_ofi1__beep 7C6 0 CODE 0 text16 dist/simulation/production\PICGame.X.production.o
+___eecpymem 558 0 CODE 0 text7 dist/simulation/production\PICGame.X.production.o
+main@_key 5A 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+main@xpos 5D 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+main@ypos 5E 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+_gameB_obstacle_delay 37 0 BANK0 1 bssBANK0 dist/simulation/production\PICGame.X.production.o
+__end_of_LCD_waitbf 64E 0 CODE 0 text14 dist/simulation/production\PICGame.X.production.o
+__end_of_LCD_wrdata 558 0 CODE 0 text13 dist/simulation/production\PICGame.X.production.o
+___eecpymem@cp 4D 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+___eecpymem@to 4E 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+__end_of__stringtab 5CC 0 STRING 0 strings dist/simulation/production\PICGame.X.production.o
+_beep_delay 7D 0 COMMON 1 bssCOMMON dist/simulation/production\PICGame.X.production.o
+__Lspace_0 0 0 ABS 0 - -
+__Lspace_1 0 0 ABS 0 - -
+__Lspace_2 0 0 ABS 0 - -
+__Lspace_3 0 0 ABS 0 - -
+__Lspace_4 0 0 ABS 0 - -
+__pbssCOMMON 7B 0 COMMON 1 bssCOMMON dist/simulation/production\PICGame.X.production.o
+LCD_putc@chr 4F 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+init_fetch0 756 0 CODE 0 inittext dist/simulation/production\PICGame.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
+LCD_puts@str 50 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+__Lend_init 1C 0 CODE 0 end_init -
+__LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+end_of_initialization 36 0 CODE 0 cinit dist/simulation/production\PICGame.X.production.o
+__Hintentry 1C 0 CODE 0 intentry -
+__Lstrings 0 0 ABS 0 strings -
+main@trashbin_hit 5B 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+__Hreset_vec 2 0 CODE 0 reset_vec -
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__HbssBANK1 0 0 ABS 0 bssBANK1 -
+__ptext1 684 0 CODE 0 text1 dist/simulation/production\PICGame.X.production.o
+__ptext2 710 0 CODE 0 text2 dist/simulation/production\PICGame.X.production.o
+__ptext3 736 0 CODE 0 text3 dist/simulation/production\PICGame.X.production.o
+__ptext4 792 0 CODE 0 text4 dist/simulation/production\PICGame.X.production.o
+__ptext5 64E 0 CODE 0 text5 dist/simulation/production\PICGame.X.production.o
+__ptext6 7C6 0 CODE 0 text6 dist/simulation/production\PICGame.X.production.o
+__ptext7 558 0 CODE 0 text7 dist/simulation/production\PICGame.X.production.o
+__ptext8 7E8 0 CODE 0 text8 dist/simulation/production\PICGame.X.production.o
+__ptext9 6E6 0 CODE 0 text9 dist/simulation/production\PICGame.X.production.o
+__end_of___eecpymem 5AC 0 CODE 0 text7 dist/simulation/production\PICGame.X.production.o
+i1__beep@CCPR1L_val 70 0 COMMON 1 cstackCOMMON dist/simulation/production\PICGame.X.production.o
+__Lpowerup 0 0 CODE 0 powerup -
+__Leeprom_data 0 0 EEDATA 3 eeprom_data -
+__H__absolute__ 0 0 ABS 0 __absolute__ -
+_gameB_spd 30 0 BANK0 1 bssBANK0 dist/simulation/production\PICGame.X.production.o
+_tile_set 82 4200 EEDATA 3 idataEEDATA dist/simulation/production\PICGame.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec -
+__end_of__initialization 36 0 CODE 0 cinit dist/simulation/production\PICGame.X.production.o
+__Lfunctab 0 0 ENTRY 0 functab -
+isr@prev_key 35 0 BANK0 1 bssBANK0 dist/simulation/production\PICGame.X.production.o
+___eecpymem@from 4B 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+___eecpymem@size 4C 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext -
+_eeprom_cgram_data 0 4200 EEDATA 3 idataEEDATA dist/simulation/production\PICGame.X.production.o
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/simulation/production\PICGame.X.production.o
+_PCONbits 8E 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+__Hend_init 1E 0 CODE 0 end_init -
+init_ram0 75E 0 CODE 0 inittext dist/simulation/production\PICGame.X.production.o
+__end_of_init 736 0 CODE 0 text2 dist/simulation/production\PICGame.X.production.o
+__end_of_main 3C0 0 CODE 0 maintext dist/simulation/production\PICGame.X.production.o
+_CMCON 1F 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+__end_of__beep 7AC 0 CODE 0 text4 dist/simulation/production\PICGame.X.production.o
+_EEADR 9B 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+_PORTA 5 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+_PORTB 6 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+_T2CON 12 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+_TRISA 85 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+_TRISB 86 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+__Hram 0 0 ABS 0 ram -
+__Lram 0 0 ABS 0 ram -
+__beep 792 0 CODE 0 text4 dist/simulation/production\PICGame.X.production.o
+interrupt_function 8 0 CODE 0 intentry dist/simulation/production\PICGame.X.production.o
+rand_tile@psrand_seed 34 0 BANK0 1 bssBANK0 dist/simulation/production\PICGame.X.production.o
+_CCP1CON 17 0 ABS 0 - dist/simulation/production\PICGame.X.production.o
+__pintentry 8 0 CODE 0 intentry dist/simulation/production\PICGame.X.production.o
+__beep@CCPR1L_val 4B 0 BANK0 1 cstackBANK0 dist/simulation/production\PICGame.X.production.o
+__end_of_LCD_wr_custom_char 684 0 CODE 0 text5 dist/simulation/production\PICGame.X.production.o
+__initialization 1E 0 CODE 0 cinit dist/simulation/production\PICGame.X.production.o
+__pbssBANK0 20 0 BANK0 1 bssBANK0 dist/simulation/production\PICGame.X.production.o
+__pbssBANK1 A0 0 BANK1 1 bssBANK1 dist/simulation/production\PICGame.X.production.o
+_clearstr 736 0 CODE 0 text3 dist/simulation/production\PICGame.X.production.o
+__pstrings 5AC 0 STRING 0 strings dist/simulation/production\PICGame.X.production.o
+__pdataEEDATA 0 0 EEDATA 3 dataEEDATA dist/simulation/production\PICGame.X.production.o
+__end_of_clearstr 756 0 CODE 0 text3 dist/simulation/production\PICGame.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+- 1 7E 2
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+text14 0 2FF 5FE 100 2
+idataEEDATA 3 0 4200 45 2
+cstackCOMMON 1 70 70 E 1
+intentry 0 4 8 2D2 2
+reset_vec 0 0 0 1 2
+bssBANK0 1 20 20 40 1
+bssBANK1 1 A0 A0 22 1
+strings 0 2D6 5AC 29 2
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES

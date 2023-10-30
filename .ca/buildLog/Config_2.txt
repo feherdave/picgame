@@ -1,0 +1,46 @@
+make -f nbproject/Makefile-Config_2.mk SUBPROJECTS= .clean-conf
+make[1]: Entering directory 'C:/Users/feher/MPLABXProjects/PICGame.X'
+rm -f  -r .ca/build/Config_2/production
+rm -f  -r .ca/dist/Config_2/production
+make[1]: Leaving directory 'C:/Users/feher/MPLABXProjects/PICGame.X'
+[32mCLEAN SUCCESSFUL (total time: 256ms)[0m
+make -f nbproject/Makefile-Config_2.mk SUBPROJECTS= .build-conf
+make[1]: Entering directory 'C:/Users/feher/MPLABXProjects/PICGame.X'
+make  -f nbproject/Makefile-Config_2.mk .ca/dist/Config_2/production/PICGame.X.production.hex
+make[2]: Entering directory 'C:/Users/feher/MPLABXProjects/PICGame.X'
+"C:\Program Files\Microchip\xc8\v2.41\bin\xc8-cc.exe"  -mcpu=16F627 -c   -mdfp="C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=request -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_2=Config_2  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits   -std=c90 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/Config_2/production/main.p1 main.c 
+"C:\Program Files\Microchip\xc8\v2.41\bin\xc8-cc.exe"  -mcpu=16F627 -c   -mdfp="C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=request -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_2=Config_2  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits   -std=c90 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/Config_2/production/lcd_hd44780.p1 lcd_hd44780.c 
+"C:\Program Files\Microchip\xc8\v2.41\bin\xc8-cc.exe"  -mcpu=16F627 -c   -mdfp="C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=request -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_Config_2=Config_2  -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits   -std=c90 -gdwarf-3 -mstack=compiled:auto:auto     -o .ca/build/Config_2/production/keybrd.p1 keybrd.c 
+main.c:134:37: warning: (373) implicit signed to unsigned conversion
+main.c:150:53: warning: (373) implicit signed to unsigned conversion
+main.c:212:49: warning: (373) implicit signed to unsigned conversion
+main.c:347:18: warning: (373) implicit signed to unsigned conversion
+lcd_hd44780.c:46:35: warning: (373) implicit signed to unsigned conversion
+lcd_hd44780.c:56:39: warning: (373) implicit signed to unsigned conversion
+lcd_hd44780.c:96:20: warning: (373) implicit signed to unsigned conversion
+lcd_hd44780.c:143:31: warning: (373) implicit signed to unsigned conversion
+lcd_hd44780.c:154:49: warning: (373) implicit signed to unsigned conversion
+lcd_hd44780.c:185:29: warning: (373) implicit signed to unsigned conversion
+lcd_hd44780.c:214:30: warning: (373) implicit signed to unsigned conversion
+lcd_hd44780.c:226:30: warning: (373) implicit signed to unsigned conversion
+"C:\Program Files\Microchip\xc8\v2.41\bin\xc8-cc.exe"  -mcpu=16F627 -Wl,-Map=.ca/dist/Config_2/production/PICGame.X.production.map  -DXPRJ_Config_2=Config_2  -Wl,--defsym=__MPLAB_BUILD=1   -mdfp="C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8"  -fno-short-double -fno-short-float -O2 -fasmfile -maddrqual=request -xassembler-with-cpp -mwarn=-3 -Wa,-a -msummary=-psect,-class,+mem,-hex,-file  -ginhx32 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall -mdefault-config-bits -std=c90 -gdwarf-3 -mstack=compiled:auto:auto      -Wl,--memorysummary,.ca/dist/Config_2/production/memoryfile.xml -o .ca/dist/Config_2/production/PICGame.X.production.elf  .ca/build/Config_2/production/main.p1 .ca/build/Config_2/production/lcd_hd44780.p1 .ca/build/Config_2/production/keybrd.p1     
+Non line specific message::: advisory: (1492) using updated 32-bit floating-point libraries; improved accuracy might increase code size
+main.c:387:: advisory: (1510) non-reentrant function "_gameB_redraw" appears in multiple call graphs and has been duplicated by the compiler
+lcd_hd44780.c:27:: advisory: (1510) non-reentrant function "_LCDPut" appears in multiple call graphs and has been duplicated by the compiler
+lcd_hd44780.c:64:: advisory: (1510) non-reentrant function "_LCDWaitNotBusy" appears in multiple call graphs and has been duplicated by the compiler
+lcd_hd44780.c:114:: advisory: (1510) non-reentrant function "_LCDPutRS0Cmd" appears in multiple call graphs and has been duplicated by the compiler
+lcd_hd44780.c:153:: advisory: (1510) non-reentrant function "_LCDSetCursorPos" appears in multiple call graphs and has been duplicated by the compiler
+lcd_hd44780.c:162:: advisory: (1510) non-reentrant function "_LCDWriteString" appears in multiple call graphs and has been duplicated by the compiler
+lcd_hd44780.c:173:: advisory: (1510) non-reentrant function "_LCDPutChar" appears in multiple call graphs and has been duplicated by the compiler
+main.c:83:: warning: (1393) possible hardware stack overflow detected; estimated stack depth: 14
+
+Memory Summary:
+    Program space        used   3D6h (   982) of   400h words   ( 95.9%)
+    Data space           used    6Ch (   108) of    E0h bytes   ( 48.2%)
+    EEPROM space         used    39h (    57) of    80h bytes   ( 44.5%)
+    Configuration bits   used     1h (     1) of     1h word    (100.0%)
+    ID Location space    used     4h (     4) of     4h bytes   (100.0%)
+
+make[2]: Leaving directory 'C:/Users/feher/MPLABXProjects/PICGame.X'
+make[1]: Leaving directory 'C:/Users/feher/MPLABXProjects/PICGame.X'
+[32mBUILD SUCCESSFUL (total time: 3s)[0m

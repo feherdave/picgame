@@ -1,0 +1,113 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 28: typedef __int24 int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 52: typedef unsigned char uint8_t;
+[; ;stdint.h: 58: typedef unsigned int uint16_t;
+[; ;stdint.h: 65: typedef __uint24 uint24_t;
+[; ;stdint.h: 72: typedef unsigned long int uint32_t;
+[; ;stdint.h: 88: typedef signed char int_least8_t;
+[; ;stdint.h: 96: typedef signed int int_least16_t;
+[; ;stdint.h: 109: typedef __int24 int_least24_t;
+[; ;stdint.h: 118: typedef signed long int int_least32_t;
+[; ;stdint.h: 136: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 143: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 154: typedef __uint24 uint_least24_t;
+[; ;stdint.h: 162: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 181: typedef signed char int_fast8_t;
+[; ;stdint.h: 188: typedef signed int int_fast16_t;
+[; ;stdint.h: 200: typedef __int24 int_fast24_t;
+[; ;stdint.h: 208: typedef signed long int int_fast32_t;
+[; ;stdint.h: 224: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 230: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 240: typedef __uint24 uint_fast24_t;
+[; ;stdint.h: 247: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 268: typedef int32_t intmax_t;
+[; ;stdint.h: 282: typedef uint32_t uintmax_t;
+[; ;stdint.h: 289: typedef int16_t intptr_t;
+[; ;stdint.h: 294: typedef uint16_t uintptr_t;
+"15 keypad.h
+[v _eeprom_keys `Euc ~T0 @X0 -> 0 `x e ]
+[i _eeprom_keys
+:U ..
+-> 49 `c
+-> 50 `c
+-> 51 `c
+-> 65 `c
+-> 52 `c
+-> 53 `c
+-> 54 `c
+-> 66 `c
+-> 55 `c
+-> 56 `c
+-> 57 `c
+-> 67 `c
+-> 42 `c
+-> 48 `c
+-> 35 `c
+-> 68 `c
+-> 0 `c
+..
+]
+[; ;keypad.h: 15: eeprom char eeprom_keys[] = "123A456B789C*0#D";
+"22
+[v _keys `uc ~T0 @X0 -> 16 `i e ]
+[; ;keypad.h: 22: char keys[16];
+[; ;keypad.h: 31: char kbd_eval(uint8_t row, uint8_t col);
+"11 keypad.c
+[v _kbd_eval `(uc ~T0 @X0 1 ef2`uc`uc ]
+{
+[; ;keypad.c: 11: char kbd_eval(uint8_t row, uint8_t col) {
+[e :U _kbd_eval ]
+[v _row `uc ~T0 @X0 1 r1 ]
+[v _col `uc ~T0 @X0 1 r2 ]
+[f ]
+"13
+[v _key_ptr `uc ~T0 @X0 1 a ]
+[; ;keypad.c: 13: uint8_t key_ptr = 0x00;
+[e = _key_ptr -> -> 0 `i `uc ]
+[; ;keypad.c: 16: if (row & 0x20) {
+"16
+[e $ ! != & -> _row `i -> 32 `i -> 0 `i 2  ]
+{
+[; ;keypad.c: 17: key_ptr = 4;
+"17
+[e = _key_ptr -> -> 4 `i `uc ]
+"18
+}
+[; ;keypad.c: 18: } else if (row & 0x40) {
+[e $U 3  ]
+[e :U 2 ]
+[e $ ! != & -> _row `i -> 64 `i -> 0 `i 4  ]
+{
+[; ;keypad.c: 19: key_ptr = 8;
+"19
+[e = _key_ptr -> -> 8 `i `uc ]
+"20
+}
+[; ;keypad.c: 20: } else if (row & 0x80) {
+[e $U 5  ]
+[e :U 4 ]
+[e $ ! != & -> _row `i -> 128 `i -> 0 `i 6  ]
+{
+[; ;keypad.c: 21: key_ptr = 12;
+"21
+[e = _key_ptr -> -> 12 `i `uc ]
+"22
+}
+[e :U 6 ]
+"26
+[e :U 5 ]
+[e :U 3 ]
+[; ;keypad.c: 22: }
+[; ;keypad.c: 26: key_ptr |= col;
+[e =| _key_ptr _col ]
+[; ;keypad.c: 28: return keys[key_ptr];
+"28
+[e ) *U + &U _keys * -> _key_ptr `ux -> -> # *U &U _keys `ui `ux ]
+[e $UE 1  ]
+[; ;keypad.c: 29: }
+"29
+[e :UE 1 ]
+}
