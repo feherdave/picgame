@@ -87,13 +87,13 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 15 "keypad.h"
+# 12 "keypad.h"
 eeprom char eeprom_keys[] = "123A456B789C*0#D";
 
-# 22
+# 19
 char keys[16];
 
-# 31
+# 28
 char kbd_eval(uint8_t row, uint8_t col);
 
 # 11 "keypad.c"

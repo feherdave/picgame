@@ -1,7 +1,7 @@
 
 # 1 "lcd_hd44780.c"
 
-# 18 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\xc.h"
+# 18 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
@@ -98,7 +98,7 @@ typedef int16_t intptr_t;
 typedef uint16_t uintptr_t;
 
 
-# 7 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\builtins.h"
+# 7 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\builtins.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
@@ -108,7 +108,7 @@ extern __nonreentrant void _delay(uint32_t);
 #pragma intrinsic(_delaywdt)
 extern __nonreentrant void _delaywdt(uint32_t);
 
-# 52 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f627.h"
+# 52 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f627.h"
 extern volatile unsigned char INDF __at(0x000);
 
 asm("INDF equ 00h");
@@ -1033,7 +1033,7 @@ extern volatile __bit nT1SYNC __at(0x82);
 
 extern volatile __bit nTO __at(0x1C);
 
-# 76 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\pic.h"
+# 76 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\pic.h"
 __attribute__((__unsupported__("The " "FLASH_READ" " macro function is no longer supported. Please use the MPLAB X MCC."))) unsigned char __flash_read(unsigned short addr);
 
 __attribute__((__unsupported__("The " "FLASH_WRITE" " macro function is no longer supported. Please use the MPLAB X MCC."))) void __flash_write(unsigned short addr, unsigned short data);
@@ -1044,7 +1044,7 @@ __attribute__((__unsupported__("The " "FLASH_ERASE" " macro function is no longe
 extern void eeprom_write(unsigned char addr, unsigned char value);
 extern unsigned char eeprom_read(unsigned char addr);
 
-# 118 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\pic.h"
+# 118 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\pic.h"
 extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
@@ -1055,37 +1055,37 @@ typedef unsigned char bool;
 # 15
 typedef unsigned char bool;
 
-# 123 "lcd_hd44780.h"
+# 140 "lcd_hd44780.h"
 struct {
 uint8_t EntryMode;
 uint8_t DisplayControl;
 } LCD;
 
-# 131
+# 148
 void LCD_wrdata(uint8_t data);
 
-# 137
+# 154
 inline void LCD_waitbf(void);
 
-# 145
+# 162
 inline void LCD_set_cgram_addr(uint8_t addr);
 
-# 153
+# 170
 void LCD_gotoxy(uint8_t x, uint8_t y);
 
-# 161
+# 178
 void LCD_puts(const char* str);
 
-# 168
+# 185
 void LCD_putc(char chr);
 
-# 176
+# 193
 void LCD_wr_custom_char(uint8_t, const char*);
 
-# 181
+# 198
 inline void LCD_init(void);
 
-# 15 "lcd_hd44780.c"
+# 34 "lcd_hd44780.c"
 void LCD_wrdata(uint8_t data) {
 TRISA &= 0xF0;
 
@@ -1109,7 +1109,7 @@ PORTAbits.RA6 = 0;
 
 LCD_waitbf();
 
-# 40
+# 59
 }
 
 
@@ -1204,7 +1204,7 @@ LCD_waitbf();
 
 PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) 0b00100000 | (uint8_t) 0b00001000 | 0b00000000);;
 
-# 136
+# 155
 PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) LCD.DisplayControl);;
 PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) 0b00000001);; _delay((unsigned long)((50)*(4000000/4000.0)));;
 

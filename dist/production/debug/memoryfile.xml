@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/production/production\PICGame.X.production.hex">
+  <executable name="dist/production/debug\PICGame.X.debug.hex">
     <memory name="program">
       <units>words</units>
       <length>1024</length>
-      <used>1006</used>
-      <free>18</free>
+      <used>1007</used>
+      <free>17</free>
     </memory>
     <memory name="data">
       <units>bytes</units>

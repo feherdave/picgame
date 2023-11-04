@@ -27,7 +27,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 282: typedef uint32_t uintmax_t;
 [; ;stdint.h: 289: typedef int16_t intptr_t;
 [; ;stdint.h: 294: typedef uint16_t uintptr_t;
-"15 keypad.h
+"12 keypad.h
 [v _eeprom_keys `Euc ~T0 @X0 -> 0 `x e ]
 [i _eeprom_keys
 :U ..
@@ -50,11 +50,11 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 0 `c
 ..
 ]
-[; ;keypad.h: 15: eeprom char eeprom_keys[] = "123A456B789C*0#D";
-"22
+[; ;keypad.h: 12: eeprom char eeprom_keys[] = "123A456B789C*0#D";
+"19
 [v _keys `uc ~T0 @X0 -> 16 `i e ]
-[; ;keypad.h: 22: char keys[16];
-[; ;keypad.h: 31: char kbd_eval(uint8_t row, uint8_t col);
+[; ;keypad.h: 19: char keys[16];
+[; ;keypad.h: 28: char kbd_eval(uint8_t row, uint8_t col);
 "11 keypad.c
 [v _kbd_eval `(uc ~T0 @X0 1 ef2`uc`uc ]
 {

@@ -2,7 +2,7 @@
 # 1 "main.c"
 
 
-# 18
+# 31
 #pragma config FOSC = INTOSCIO
 #pragma config WDTE = OFF
 #pragma config PWRTE = OFF
@@ -12,7 +12,7 @@
 #pragma config CPD = OFF
 #pragma config CP = OFF
 
-# 18 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\xc.h"
+# 18 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
@@ -109,7 +109,7 @@ typedef int16_t intptr_t;
 typedef uint16_t uintptr_t;
 
 
-# 7 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\builtins.h"
+# 7 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\builtins.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
@@ -119,7 +119,7 @@ extern __nonreentrant void _delay(uint32_t);
 #pragma intrinsic(_delaywdt)
 extern __nonreentrant void _delaywdt(uint32_t);
 
-# 52 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f627.h"
+# 52 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f627.h"
 extern volatile unsigned char INDF __at(0x000);
 
 asm("INDF equ 00h");
@@ -1044,7 +1044,7 @@ extern volatile __bit nT1SYNC __at(0x82);
 
 extern volatile __bit nTO __at(0x1C);
 
-# 76 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\pic.h"
+# 76 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\pic.h"
 __attribute__((__unsupported__("The " "FLASH_READ" " macro function is no longer supported. Please use the MPLAB X MCC."))) unsigned char __flash_read(unsigned short addr);
 
 __attribute__((__unsupported__("The " "FLASH_WRITE" " macro function is no longer supported. Please use the MPLAB X MCC."))) void __flash_write(unsigned short addr, unsigned short data);
@@ -1055,7 +1055,7 @@ __attribute__((__unsupported__("The " "FLASH_ERASE" " macro function is no longe
 extern void eeprom_write(unsigned char addr, unsigned char value);
 extern unsigned char eeprom_read(unsigned char addr);
 
-# 118 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\pic.h"
+# 118 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\pic.h"
 extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
@@ -1142,46 +1142,46 @@ extern char * ftoa(float f, int * status);
 # 15 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 123 "lcd_hd44780.h"
+# 140 "lcd_hd44780.h"
 struct {
 uint8_t EntryMode;
 uint8_t DisplayControl;
 } LCD;
 
-# 131
+# 148
 void LCD_wrdata(uint8_t data);
 
-# 137
+# 154
 inline void LCD_waitbf(void);
 
-# 145
+# 162
 inline void LCD_set_cgram_addr(uint8_t addr);
 
-# 153
+# 170
 void LCD_gotoxy(uint8_t x, uint8_t y);
 
-# 161
+# 178
 void LCD_puts(const char* str);
 
-# 168
+# 185
 void LCD_putc(char chr);
 
-# 176
+# 193
 void LCD_wr_custom_char(uint8_t, const char*);
 
-# 181
+# 198
 inline void LCD_init(void);
 
-# 15 "keypad.h"
+# 12 "keypad.h"
 eeprom char eeprom_keys[] = "123A456B789C*0#D";
 
-# 22
+# 19
 char keys[16];
 
-# 31
+# 28
 char kbd_eval(uint8_t row, uint8_t col);
 
-# 57 "main.c"
+# 70 "main.c"
 eeprom char eeprom_cgram_data[6][8] = {
 { 0x07, 0x05, 0x0D, 0x09, 0x1B, 0x1F, 0x1D, 0x02 },
 { 0x1F, 0x15, 0x0A, 0x15, 0x0A, 0x1F, 0x17, 0x08 },
@@ -1212,7 +1212,7 @@ inline void init(void);
 char rand_tile(void);
 void clearstr(unsigned char*);
 
-# 90
+# 103
 void main(void) {
 
 
@@ -1429,14 +1429,14 @@ PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) 0b00000001);; _delay((unsigned long)((50
 }
 }
 
-# 309
+# 322
 void __interrupt() isr() {
 
 static char prev_key = '\0';
 static uint8_t key_col_select;
 static uint8_t kbd_skip_t0_cyc = 0;
 
-# 320
+# 333
 if (T0IF) {
 T0IF = 0;
 
@@ -1490,7 +1490,7 @@ PORTBbits.RB2 = !PORTBbits.RB2;
 }
 }
 
-# 379
+# 392
 void _beep(uint8_t PR2_val, uint8_t CCPR1L_val) {
 
 
@@ -1502,7 +1502,7 @@ PR2 = PR2_val;
 CCPR1L = CCPR1L_val;
 }
 
-# 396
+# 409
 char rand_tile() {
 
 if (gameB_obstacle_delay) {
@@ -1522,7 +1522,7 @@ gameB_obstacle_delay = gameB_difficulty;
 return tile_set[res];
 }
 
-# 420
+# 433
 void clearstr(unsigned char *str) {
 while (*str) {
 *str = ' ';
@@ -1530,7 +1530,7 @@ str++;
 }
 }
 
-# 430
+# 443
 inline void init(void) {
 
 
