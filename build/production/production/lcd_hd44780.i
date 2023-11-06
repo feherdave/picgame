@@ -1,18 +1,7 @@
 
-# 1 "main.c"
+# 1 "lcd_hd44780.c"
 
-
-# 31
-#pragma config FOSC = INTOSCIO
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config BOREN = ON
-#pragma config LVP = OFF
-#pragma config CPD = OFF
-#pragma config CP = OFF
-
-# 18 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\xc.h"
+# 18 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\xc.h"
 extern const char __xc8_OPTIM_SPEED;
 
 extern double __fpnormalize(double);
@@ -109,7 +98,7 @@ typedef int16_t intptr_t;
 typedef uint16_t uintptr_t;
 
 
-# 7 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\builtins.h"
+# 7 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\builtins.h"
 #pragma intrinsic(__nop)
 extern void __nop(void);
 
@@ -119,7 +108,7 @@ extern __nonreentrant void _delay(uint32_t);
 #pragma intrinsic(_delaywdt)
 extern __nonreentrant void _delaywdt(uint32_t);
 
-# 52 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f627.h"
+# 52 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f627.h"
 extern volatile unsigned char INDF __at(0x000);
 
 asm("INDF equ 00h");
@@ -1044,7 +1033,7 @@ extern volatile __bit nT1SYNC __at(0x82);
 
 extern volatile __bit nTO __at(0x1C);
 
-# 76 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\pic.h"
+# 76 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\pic.h"
 __attribute__((__unsupported__("The " "FLASH_READ" " macro function is no longer supported. Please use the MPLAB X MCC."))) unsigned char __flash_read(unsigned short addr);
 
 __attribute__((__unsupported__("The " "FLASH_WRITE" " macro function is no longer supported. Please use the MPLAB X MCC."))) void __flash_write(unsigned short addr, unsigned short data);
@@ -1055,7 +1044,7 @@ __attribute__((__unsupported__("The " "FLASH_ERASE" " macro function is no longe
 extern void eeprom_write(unsigned char addr, unsigned char value);
 extern unsigned char eeprom_read(unsigned char addr);
 
-# 118 "C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\pic.h"
+# 118 "C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\pic.h"
 extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
@@ -1063,83 +1052,7 @@ extern __bank0 __bit __timeout;
 # 15 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
-# 4 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\__size_t.h"
-typedef unsigned size_t;
-
-# 7 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\stdlib.h"
-typedef unsigned short wchar_t;
-
 # 15
-typedef struct {
-int rem;
-int quot;
-} div_t;
-typedef struct {
-unsigned rem;
-unsigned quot;
-} udiv_t;
-typedef struct {
-long quot;
-long rem;
-} ldiv_t;
-typedef struct {
-unsigned long quot;
-unsigned long rem;
-} uldiv_t;
-
-# 65
-extern double atof(const char *);
-extern double strtod(const char *, const char **);
-extern int atoi(const char *);
-extern unsigned xtoi(const char *);
-extern long atol(const char *);
-
-# 73
-extern long strtol(const char *, char **, int);
-
-extern int rand(void);
-extern void srand(unsigned int);
-extern void * calloc(size_t, size_t);
-extern div_t div(int numer, int denom);
-extern udiv_t udiv(unsigned numer, unsigned denom);
-extern ldiv_t ldiv(long numer, long denom);
-extern uldiv_t uldiv(unsigned long numer,unsigned long denom);
-
-# 85
-extern unsigned long _lrotl(unsigned long value, unsigned int shift);
-extern unsigned long _lrotr(unsigned long value, unsigned int shift);
-extern unsigned int _rotl(unsigned int value, unsigned int shift);
-extern unsigned int _rotr(unsigned int value, unsigned int shift);
-
-
-
-
-extern void * malloc(size_t);
-extern void free(void *);
-extern void * realloc(void *, size_t);
-
-# 104
-extern int atexit(void (*)(void));
-extern char * getenv(const char *);
-extern char ** environ;
-extern int system(char *);
-extern void qsort(void *, size_t, size_t, int (*)(const void *, const void *));
-extern void * bsearch(const void *, void *, size_t, size_t, int(*)(const void *, const void *));
-extern int abs(int);
-extern long labs(long);
-
-extern char * itoa(char * buf, int val, int base);
-extern char * utoa(char * buf, unsigned val, int base);
-
-
-
-
-extern char * ltoa(char * buf, long val, int base);
-extern char * ultoa(char * buf, unsigned long val, int base);
-
-extern char * ftoa(float f, int * status);
-
-# 15 "C:\Program Files\Microchip\xc8\v2.41\pic\include\c90\stdbool.h"
 typedef unsigned char bool;
 
 # 140 "lcd_hd44780.h"
@@ -1172,391 +1085,129 @@ void LCD_wr_custom_char(uint8_t, const char*);
 # 198
 inline void LCD_init(void);
 
-# 12 "keypad.h"
-eeprom char eeprom_keys[] = "123A456B789C*0#D";
-
-# 19
-char keys[16];
-
-# 28
-char kbd_eval(uint8_t row, uint8_t col);
-
-# 70 "main.c"
-eeprom char eeprom_cgram_data[6][8] = {
-{ 0x07, 0x05, 0x0D, 0x09, 0x1B, 0x1F, 0x1D, 0x02 },
-{ 0x1F, 0x15, 0x0A, 0x15, 0x0A, 0x1F, 0x17, 0x08 },
-{ 0x1C, 0x0A, 0x19, 0x0D, 0x1F, 0x1F, 0x1B, 0x04 },
-{ 0x00, 0x0E, 0x1B, 0x1F, 0x15, 0x15, 0x15, 0x1F },
-{ 0x00, 0x04, 0x0A, 0x04, 0x1F, 0x04, 0x0A, 0x11 },
-{ 0x0A, 0x15, 0x0A, 0x15, 0x0A, 0x04, 0x04, 0x1C }
-};
-
-eeprom char tile_set[] = { ' ', 3, 4, 5 };
-
-char key = '\0';
-uint8_t beep_delay;
+# 34 "lcd_hd44780.c"
+void LCD_wrdata(uint8_t data) {
+TRISA &= 0xF0;
 
 
-char gameA_line_buf[16 + 1];
-uint8_t gameB_spd;
-uint8_t gameB_spd_cnt;
-uint8_t gameB_truckpos;
-uint8_t gameB_obstacle_delay;
-uint8_t gameB_track[2][16 + 1];
-uint8_t gameB_difficulty;
-bool flash_lcd;
-bool gameB_cnt_ena;
+PORTAbits.RA6 = 1;
+__nop();
+PORTA = (PORTA & 0xF0) | data >> 4;
+__nop();
+PORTAbits.RA6 = 0;
 
-void _beep(uint8_t, uint8_t);
-inline void init(void);
-char rand_tile(void);
-void clearstr(unsigned char*);
-
-# 103
-void main(void) {
+__nop();
 
 
-init();
-
-uint8_t i = 16 - 1;
-do {
-keys[i] = eeprom_keys[i];
-gameA_line_buf[i] = ' ';
-} while (i--);
-gameA_line_buf[16] = 0;
-
-
-LCD_init();
-
-
-LCD_wr_custom_char(0, eeprom_cgram_data[0]);
-LCD_wr_custom_char(1, eeprom_cgram_data[1]);
-LCD_wr_custom_char(2, eeprom_cgram_data[2]);
-LCD_wr_custom_char(3, eeprom_cgram_data[3]);
-LCD_wr_custom_char(4, eeprom_cgram_data[4]);
-LCD_wr_custom_char(5, eeprom_cgram_data[5]);
-
-LCD.DisplayControl |= 0b00000100;
-PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) LCD.DisplayControl);;
-
-
-INTCON = 0b10100000;
-
-
-while(1) {
-
-
-LCD_gotoxy(0, 0);
-LCD_puts("Select game!\0");
-LCD_gotoxy(0, 1);
-LCD_puts("A / B\0");
-
-readkey:
-
-key = '\0'; while (!key) { };
-switch (key) {
-case 'A':
+PORTAbits.RA6 = 1;
+__nop();
+PORTA = (PORTA & 0xF0) | (data & 0x0f);
+__nop();
+PORTAbits.RA6 = 0;
 
 
 
-PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) 0b00000001);; _delay((unsigned long)((50)*(4000000/4000.0)));;
-LCD.DisplayControl |= 0b00000001;
-PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) LCD.DisplayControl);;
+LCD_waitbf();
 
-uint8_t xpos = 0, ypos = 0;
-
-while(1) {
-key = '\0'; while (!key) { };
-switch (key) {
-case '*':
-
-goto back_to_main;
-case '#':
-
-xpos = 0;
-if (!ypos) {
-LCD_gotoxy(0, ++ypos);
-} else {
-PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) 0b00000001);; _delay((unsigned long)((50)*(4000000/4000.0)));;
-
-LCD_gotoxy(0, 0);
-LCD_puts(gameA_line_buf);
-LCD_gotoxy(0, 1);
-
-clearstr(gameA_line_buf);
-}
-break;
-default:
-if (xpos < (16 - 1)) {
-LCD_putc(key);
-
-if (ypos) {
-gameA_line_buf[xpos] = key;
-}
-
-xpos++;
-}
-}
-}
-break;
-
-
-case 'B':
-
-key = '\0';
-
-i = 16 - 1;
-do {
-gameB_track[0][i] = ' ';
-gameB_track[1][i] = ' ';
-} while (i--);
-
-gameB_track[0][16] = '\0';
-gameB_track[1][16] = '\0';
-
-gameB_spd = 50;
-gameB_difficulty = 16;
-
-union {
-struct {
-unsigned trashbin: 1;
-unsigned obstacle: 1;
-};
-uint8_t bval;
-} hits;
-
-gameB_cnt_ena = 1;
-
-while (1) {
-
-
-redraw:
-
-
-hits.bval = 0;
-i = 2;
-do {
-switch (gameB_track[gameB_truckpos][i]) {
-case ' ':
-break;
-case 3:
-hits.trashbin = 1;
-break;
-default:
-hits.obstacle = 1;
-}
-
-gameB_track[gameB_truckpos][i] = ' ';
-} while (i--);
-
-if (hits.obstacle) {
-
-
-_beep(240, 120);
-flash_lcd = 1;
-gameB_cnt_ena = 0;
-_delay((unsigned long)((800)*(4000000/4000.0)));
-gameB_cnt_ena = 1;
-flash_lcd = 0;
-PORTBbits.RB2 = 1;
-if (gameB_spd < 50) gameB_spd++;
-} else if (hits.trashbin) {
-_beep(60, 30);
-gameB_difficulty -= 2;
-if (gameB_difficulty == 6) {
-gameB_difficulty = 16;
-if (gameB_spd > 20) gameB_spd--;
-}
+# 59
 }
 
 
-LCD_gotoxy(0, 0);
-LCD_puts(gameB_track[0]);
-LCD_gotoxy(0, 1);
-LCD_puts(gameB_track[1]);
+inline void LCD_waitbf() {
 
-LCD_gotoxy(0, gameB_truckpos);
-LCD_putc(0);
-LCD_putc(1);
-LCD_putc(2);
+bool busy;
+
+PORTAbits.RA4 = 0;
+PORTAbits.RA7 = 1;
+
+TRISA |= 0x0f;
 
 do {
-if (key) {
-uint8_t _key = key;
-key = '\0';
+PORTAbits.RA6 = 1;
+__nop();
 
-switch(_key) {
-case '*':
-goto back_to_main;
+busy = PORTA & 0x08;
 
-case 'A':
-gameB_truckpos = 0;
-goto redraw;
+PORTAbits.RA6 = 0;
+__nop();
 
-case 'B':
-gameB_truckpos = 1;
-goto redraw;
-}
-}
-} while (gameB_spd_cnt);
+PORTAbits.RA6 = 1;
+__nop();
+PORTAbits.RA6 = 0;
+__nop();
+} while (busy);
 
-gameB_spd_cnt = gameB_spd;
-
-
-for (i = 0; i < 15; i++) {
-gameB_track[0][i] = gameB_track[0][i + 1];
-gameB_track[1][i] = gameB_track[1][i + 1];
+PORTAbits.RA7 = 0;
 }
 
 
-gameB_track[0][15] = rand_tile();
-gameB_track[1][15] = rand_tile();
+inline void LCD_set_cgram_addr(uint8_t addr) {
+PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) 0b01000000 | addr);;
 }
 
-break;
-
-
-default:
-goto readkey;
+void LCD_gotoxy(uint8_t x, uint8_t y) {
+PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) 0b10000000 | (uint8_t) y * 0x40 + x);;
 }
 
-back_to_main:
-
-LCD.DisplayControl &= 0b11111101 & 0b11111110;
-PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) LCD.DisplayControl);;
-
-PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) 0b00000001);; _delay((unsigned long)((50)*(4000000/4000.0)));;
-}
-}
-
-# 322
-void __interrupt() isr() {
-
-static char prev_key = '\0';
-static uint8_t key_col_select;
-static uint8_t kbd_skip_t0_cyc = 0;
-
-# 333
-if (T0IF) {
-T0IF = 0;
-
-
-uint8_t _row = PORTB;
-
-
-
-if (kbd_skip_t0_cyc) {
-kbd_skip_t0_cyc--;
-}
-
-if (_row & 0xf0 && !key) {
-uint8_t _col = key_col_select & 0x03;
-uint8_t _key;
-
-_key = kbd_eval(_row, _col);
-
-
-if (_key != prev_key || !kbd_skip_t0_cyc) {
-kbd_skip_t0_cyc = 12;
-key = _key;
-prev_key = _key;
-_beep(120, 60);
-}
-}
-
-
-key_col_select++;
-PORTB = (PORTB & 0xFC) | (key_col_select & 0x03);
-
-
-if (CCPR1L) {
-
-if (beep_delay) {
-beep_delay--;
-} else {
-
-CCPR1L = 0;
-}
-}
-
-
-if (gameB_spd_cnt && gameB_cnt_ena) {
-gameB_spd_cnt--;
-}
-
-if (flash_lcd) {
-PORTBbits.RB2 = !PORTBbits.RB2;
-}
-}
-}
-
-# 392
-void _beep(uint8_t PR2_val, uint8_t CCPR1L_val) {
-
-
-if (CCPR1L) return;
-
-
-beep_delay = 6;
-PR2 = PR2_val;
-CCPR1L = CCPR1L_val;
-}
-
-# 409
-char rand_tile() {
-
-if (gameB_obstacle_delay) {
-gameB_obstacle_delay--;
-return ' ';
-}
-
-static uint8_t psrand_seed;
-uint8_t res = (TMR0 ^ TMR2 ^ psrand_seed) & 0x03;
-
-psrand_seed = res;
-
-if (res > 1) {
-gameB_obstacle_delay = gameB_difficulty;
-}
-
-return tile_set[res];
-}
-
-# 433
-void clearstr(unsigned char *str) {
+void LCD_puts(const char* str) {
 while (*str) {
-*str = ' ';
-str++;
+LCD_putc(*str++);
 }
 }
 
-# 443
-inline void init(void) {
+void LCD_putc(char chr) {
+PORTAbits.RA4 = 1;
+LCD_wrdata(chr);
+}
+
+void LCD_wr_custom_char(uint8_t code, const char* dataarr) {
+LCD_set_cgram_addr(code << 3);
+
+uint8_t cnt = 7;
+do {
+LCD_putc(*dataarr++);
+} while (cnt--);
+}
+
+inline void LCD_init() {
+
+LCD.DisplayControl = 0b00001000;
+
+TRISA &= 0xF0;
+PORTAbits.RA4 = 0;
+
+uint8_t i = 3;
+do {
+_delay((unsigned long)((50)*(4000000/4000.0)));
+
+PORTAbits.RA6 = 1;
+PORTA = (PORTA & 0xf0) | 0x03;
+__nop();
+__nop();
+PORTAbits.RA6 = 0;
+} while (i--);
+
+__nop();
+__nop();
 
 
-PCONbits.OSCF = 1;
+PORTAbits.RA6 = 1;
+PORTA = (PORTA & 0xf0) | 0x02;
+__nop();
+__nop();
+PORTAbits.RA6 = 0;
 
 
-CMCON = 7;
-
-
-TRISA = 0x0c;
-
-
-
-TRISB = 0xf0;
+LCD_waitbf();
 
 
 
-OPTION_REG = 0x85;
+PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) 0b00100000 | (uint8_t) 0b00001000 | 0b00000000);;
 
+# 155
+PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) LCD.DisplayControl);;
+PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) 0b00000001);; _delay((unsigned long)((50)*(4000000/4000.0)));;
 
-
-
-CCPR1L = 0;
-CCP1CON = 0x0C;
-T2CON = 0x07;
-
-
-PORTBbits.RB2 = 1;
+LCD.EntryMode = 0b00000100 | 0b00000010;
+PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) LCD.EntryMode);;
 }
