@@ -44,7 +44,7 @@
 [v _clearstr clearstr `(v  1 e 1 0 ]
 "443
 [v _init init `T(v  1 e 1 0 ]
-"59 C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f627.h
+"59 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f627.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
 "166
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -132,7 +132,7 @@
 "70 D:\Dokumentumok\MPLABXProjects\PICGame.X\main.c
 [v _eeprom_cgram_data eeprom_cgram_data `VE[6][8]uc  1 e 48 0 ]
 "79
-[v _tile_set tile_set `VE[8]uc  1 e 8 0 ]
+[v _tile_set tile_set `VE[4]uc  1 e 4 0 ]
 "81
 [v _key key `uc  1 e 1 0 ]
 "82
@@ -177,9 +177,9 @@
 "409
 [v _rand_tile rand_tile `(uc  1 e 1 0 ]
 {
-"412
+"417
 [v rand_tile@res res `uc  1 a 1 6 ]
-"411
+"416
 [v rand_tile@psrand_seed psrand_seed `uc  1 s 1 psrand_seed ]
 "426
 } 0

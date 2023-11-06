@@ -62,9 +62,9 @@
 #define BeepMid()       _beep(120, 60)
 
 // Game B macros
-#define GameBMinSpeed           40
+#define GameBMinSpeed           50
 #define GameBMaxSpeed           20
-#define GameBDefaultDifficulty  14
+#define GameBDefaultDifficulty  16
 
 // Custom character set for truck game
 eeprom char eeprom_cgram_data[6][8] = {
@@ -73,10 +73,10 @@ eeprom char eeprom_cgram_data[6][8] = {
     { 0x1C, 0x0A, 0x19, 0x0D, 0x1F, 0x1F, 0x1B, 0x04 },     // 2: Trash truck front
     { 0x00, 0x0E, 0x1B, 0x1F, 0x15, 0x15, 0x15, 0x1F },     // 3: Trash bin
     { 0x00, 0x04, 0x0A, 0x04, 0x1F, 0x04, 0x0A, 0x11 },     // 4: Human
-    { 0x0A, 0x15, 0x0A, 0x15, 0x0A, 0x04, 0x04, 0x04 }      // 5: Tree
+    { 0x0A, 0x15, 0x0A, 0x15, 0x0A, 0x04, 0x04, 0x1C }      // 5: Tree
 };
 
-eeprom char tile_set[] = { ' ', 3, 4, 3, 5, 3, 4, 5 };      // Tile set for game B randomizer
+eeprom char tile_set[] = { ' ', 3, 4, 5 };      // Tile set for game B randomizer
 
 char key = '\0';                // Actually pressed key
 uint8_t beep_delay;             // Software timer for the beep function
@@ -378,7 +378,7 @@ void __interrupt() isr() {
         }
         
         if (flash_lcd) {
-            LCD_BACKLIGHT = TMR2 & 0x01;
+            LCD_BACKLIGHT = !LCD_BACKLIGHT;
         }
     }
 }
@@ -408,16 +408,16 @@ void _beep(uint8_t PR2_val, uint8_t CCPR1L_val) {
  */
 char rand_tile() {
     
-    static uint8_t psrand_seed;
-	uint8_t res = (TMR0 ^ TMR2 + psrand_seed) & 0x07;
-
-	psrand_seed = res;
-
     if (gameB_obstacle_delay) {
         gameB_obstacle_delay--;
         return ' ';
     }
     
+    static uint8_t psrand_seed;
+	uint8_t res = (TMR0 ^ TMR2 ^ psrand_seed) & 0x03;
+
+	psrand_seed = res;
+
     if (res > 1) {
         gameB_obstacle_delay = gameB_difficulty;
     }
