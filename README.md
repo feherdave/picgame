@@ -14,7 +14,7 @@ This is a small handheld game project using a PIC16F627, a 1602 LCD, and a 4x4 m
 
 ### Software
 
-The project is developed using MPLAB X IDE v6.05 and Microchip XC8 v2.41 C compiler (free version), both of which can be downloaded for free. If you already have them, open MPLAB X IDE, and pull the project from Github. The MPLAB project includes two configurations:
+The project is developed using MPLAB X IDE v6.05 and Microchip XC8 v2.41 C compiler (free version), both of which can be downloaded for free. If you already have them, just clone the repository and open it in MPLAB X IDE. The MPLAB X project includes two configurations:
 
 - **Simulation:** Use this for debugging in the simulator.
 - **Production:** Employ this for compiling and downloading to the real device. PICkit 3 is selected as the hardware tool in this configuration (since I used that one for programming), but you can modify it according to your requirements.
