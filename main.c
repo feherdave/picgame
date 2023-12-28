@@ -157,6 +157,8 @@ void main(void) {
                     switch (key) {
                         case '*':
                             // Acts as 'back'
+                            clearstr(gameA_line_buf);
+                            
                             goto back_to_main;
                         case '#':
                             // Acts as 'enter'
