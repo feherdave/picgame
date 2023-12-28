@@ -1182,16 +1182,17 @@ char keys[16];
 char kbd_eval(uint8_t row, uint8_t col);
 
 # 70 "main.c"
-eeprom char eeprom_cgram_data[6][8] = {
+eeprom char eeprom_cgram_data[7][8] = {
 { 0x07, 0x05, 0x0D, 0x09, 0x1B, 0x1F, 0x1D, 0x02 },
 { 0x1F, 0x15, 0x0A, 0x15, 0x0A, 0x1F, 0x17, 0x08 },
 { 0x1C, 0x0A, 0x19, 0x0D, 0x1F, 0x1F, 0x1B, 0x04 },
 { 0x00, 0x0E, 0x1B, 0x1F, 0x15, 0x15, 0x15, 0x1F },
 { 0x00, 0x04, 0x0A, 0x04, 0x1F, 0x04, 0x0A, 0x11 },
-{ 0x0A, 0x15, 0x0A, 0x15, 0x0A, 0x04, 0x04, 0x04 }
+{ 0x0A, 0x15, 0x0A, 0x15, 0x0A, 0x04, 0x04, 0x04 },
+{ 0x04, 0x0A, 0x11, 0x1F, 0x11, 0x17, 0x15, 0x1F }
 };
 
-eeprom char tile_set[] = { ' ', 3, 4, 3, 5, 3, 4, 5 };
+eeprom char tile_set[] = { ' ', 3, 3, 4, 4, 5, 5, 6 };
 
 char key = '\0';
 uint8_t beep_delay;
@@ -1212,7 +1213,7 @@ inline void init(void);
 char rand_tile(void);
 void clearstr(unsigned char*);
 
-# 103
+# 104
 void main(void) {
 
 
@@ -1235,6 +1236,7 @@ LCD_wr_custom_char(2, eeprom_cgram_data[2]);
 LCD_wr_custom_char(3, eeprom_cgram_data[3]);
 LCD_wr_custom_char(4, eeprom_cgram_data[4]);
 LCD_wr_custom_char(5, eeprom_cgram_data[5]);
+LCD_wr_custom_char(6, eeprom_cgram_data[6]);
 
 LCD.DisplayControl |= 0b00000100;
 PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) LCD.DisplayControl);;
@@ -1269,6 +1271,8 @@ while(1) {
 key = '\0'; while (!key) { };
 switch (key) {
 case '*':
+
+clearstr(gameA_line_buf);
 
 goto back_to_main;
 case '#':
@@ -1429,14 +1433,14 @@ PORTAbits.RA4 = 0; LCD_wrdata((uint8_t) 0b00000001);; _delay((unsigned long)((50
 }
 }
 
-# 322
+# 326
 void __interrupt() isr() {
 
 static char prev_key = '\0';
 static uint8_t key_col_select;
 static uint8_t kbd_skip_t0_cyc = 0;
 
-# 333
+# 337
 if (T0IF) {
 T0IF = 0;
 
@@ -1490,19 +1494,16 @@ PORTBbits.RB2 = TMR2 & 0x01;
 }
 }
 
-# 392
+# 396
 void _beep(uint8_t PR2_val, uint8_t CCPR1L_val) {
 
-
-if (CCPR1L) return;
-
-
+# 402
 beep_delay = 6;
 PR2 = PR2_val;
 CCPR1L = CCPR1L_val;
 }
 
-# 409
+# 413
 char rand_tile() {
 
 static uint8_t psrand_seed;
@@ -1515,14 +1516,14 @@ gameB_obstacle_delay--;
 return ' ';
 }
 
-if (res > 1) {
+if (res > 2) {
 gameB_obstacle_delay = gameB_difficulty;
 }
 
 return tile_set[res];
 }
 
-# 433
+# 437
 void clearstr(unsigned char *str) {
 while (*str) {
 *str = ' ';
@@ -1530,7 +1531,7 @@ str++;
 }
 }
 
-# 443
+# 447
 inline void init(void) {
 
 

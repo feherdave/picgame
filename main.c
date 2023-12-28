@@ -67,16 +67,17 @@
 #define GameBDefaultDifficulty  14
 
 // Custom character set for truck game
-eeprom char eeprom_cgram_data[6][8] = {
+eeprom char eeprom_cgram_data[7][8] = {
     { 0x07, 0x05, 0x0D, 0x09, 0x1B, 0x1F, 0x1D, 0x02 },     // 0: Trash truck back
     { 0x1F, 0x15, 0x0A, 0x15, 0x0A, 0x1F, 0x17, 0x08 },     // 1: Trash truck middle
     { 0x1C, 0x0A, 0x19, 0x0D, 0x1F, 0x1F, 0x1B, 0x04 },     // 2: Trash truck front
     { 0x00, 0x0E, 0x1B, 0x1F, 0x15, 0x15, 0x15, 0x1F },     // 3: Trash bin
     { 0x00, 0x04, 0x0A, 0x04, 0x1F, 0x04, 0x0A, 0x11 },     // 4: Human
-    { 0x0A, 0x15, 0x0A, 0x15, 0x0A, 0x04, 0x04, 0x04 }      // 5: Tree
+    { 0x0A, 0x15, 0x0A, 0x15, 0x0A, 0x04, 0x04, 0x04 },     // 5: Tree
+    { 0x04, 0x0A, 0x11, 0x1F, 0x11, 0x17, 0x15, 0x1F }      // 6: House
 };
 
-eeprom char tile_set[] = { ' ', 3, 4, 3, 5, 3, 4, 5 };      // Tile set for game B randomizer
+eeprom char tile_set[] = { ' ', 3, 3, 4, 4, 5, 5, 6 };      // Tile set for game B randomizer
 
 char key = '\0';                // Actually pressed key
 uint8_t beep_delay;             // Software timer for the beep function
@@ -122,6 +123,7 @@ void main(void) {
     LCD_wr_custom_char(3, eeprom_cgram_data[3]);
     LCD_wr_custom_char(4, eeprom_cgram_data[4]);
     LCD_wr_custom_char(5, eeprom_cgram_data[5]);
+    LCD_wr_custom_char(6, eeprom_cgram_data[6]);
     
     LCD.DisplayControl |= LCD_DISPLAY_CTRL_D_ON;
     LCDDisplayControl();
@@ -393,9 +395,6 @@ void __interrupt() isr() {
  */
 void _beep(uint8_t PR2_val, uint8_t CCPR1L_val) {
 
-    // If beeping then quit
-    if (CCPR1L) return;
-    
     // Start beeping (for 6 T0 cycles)
     beep_delay = 6;
     PR2 = PR2_val;
@@ -420,7 +419,7 @@ char rand_tile() {
         return ' ';
     }
     
-    if (res > 1) {
+    if (res > 2) {
         gameB_obstacle_delay = gameB_difficulty;
     }
     

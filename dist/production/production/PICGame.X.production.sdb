@@ -31,18 +31,18 @@
 [v _LCD_wr_custom_char LCD_wr_custom_char `(v  1 e 1 0 ]
 "118
 [v _LCD_init LCD_init `T(v  1 e 1 0 ]
-"103 D:\Dokumentumok\MPLABXProjects\PICGame.X\main.c
+"104 D:\Dokumentumok\MPLABXProjects\PICGame.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"322
+"326
 [v _isr isr `II(v  1 e 1 0 ]
-"392
+"396
 [v __beep _beep `(v  1 e 1 0 ]
 [v i1__beep _beep `(v  1 e 1 0 ]
-"409
+"413
 [v _rand_tile rand_tile `(uc  1 e 1 0 ]
-"433
+"437
 [v _clearstr clearstr `(v  1 e 1 0 ]
-"443
+"447
 [v _init init `T(v  1 e 1 0 ]
 "59 C:/Users/feher/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.4.149/xc8\pic\include\proc\pic16f627.h
 [v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
@@ -130,81 +130,81 @@
 "143 D:\Dokumentumok\MPLABXProjects\PICGame.X\lcd_hd44780.h
 [v _LCD LCD `S22  1 e 2 0 ]
 "70 D:\Dokumentumok\MPLABXProjects\PICGame.X\main.c
-[v _eeprom_cgram_data eeprom_cgram_data `VE[6][8]uc  1 e 48 0 ]
-"79
+[v _eeprom_cgram_data eeprom_cgram_data `VE[7][8]uc  1 e 56 0 ]
+"80
 [v _tile_set tile_set `VE[8]uc  1 e 8 0 ]
-"81
-[v _key key `uc  1 e 1 0 ]
 "82
+[v _key key `uc  1 e 1 0 ]
+"83
 [v _beep_delay beep_delay `uc  1 e 1 0 ]
-"85
-[v _gameA_line_buf gameA_line_buf `[17]uc  1 e 17 0 ]
 "86
-[v _gameB_spd gameB_spd `uc  1 e 1 0 ]
+[v _gameA_line_buf gameA_line_buf `[17]uc  1 e 17 0 ]
 "87
-[v _gameB_spd_cnt gameB_spd_cnt `uc  1 e 1 0 ]
+[v _gameB_spd gameB_spd `uc  1 e 1 0 ]
 "88
-[v _gameB_truckpos gameB_truckpos `uc  1 e 1 0 ]
+[v _gameB_spd_cnt gameB_spd_cnt `uc  1 e 1 0 ]
 "89
-[v _gameB_obstacle_delay gameB_obstacle_delay `uc  1 e 1 0 ]
+[v _gameB_truckpos gameB_truckpos `uc  1 e 1 0 ]
 "90
-[v _gameB_track gameB_track `[2][17]uc  1 e 34 0 ]
+[v _gameB_obstacle_delay gameB_obstacle_delay `uc  1 e 1 0 ]
 "91
-[v _gameB_difficulty gameB_difficulty `uc  1 e 1 0 ]
+[v _gameB_track gameB_track `[2][17]uc  1 e 34 0 ]
 "92
-[v _flash_lcd flash_lcd `uc  1 e 1 0 ]
+[v _gameB_difficulty gameB_difficulty `uc  1 e 1 0 ]
 "93
+[v _flash_lcd flash_lcd `uc  1 e 1 0 ]
+"94
 [v _gameB_cnt_ena gameB_cnt_ena `uc  1 e 1 0 ]
-"103
+"104
 [v _main main `(v  1 e 1 0 ]
 {
-"272
+"276
 [v main@_key _key `uc  1 a 1 13 ]
-"153
+"155
 [v main@ypos ypos `uc  1 a 1 16 ]
 [s S205 . 1 `uc 1 trashbin 1 0 :1:0 
 `uc 1 obstacle 1 0 :1:1 
 ]
-"213
+"217
 [u S208 . 1 `S205 1 . 1 0 `uc 1 bval 1 0 ]
 [v main@hits hits `S208  1 a 1 15 ]
-"153
+"155
 [v main@xpos xpos `uc  1 a 1 14 ]
-"108
+"109
 [v main@i i `uc  1 a 1 17 ]
-"317
+"321
 } 0
-"409
+"413
 [v _rand_tile rand_tile `(uc  1 e 1 0 ]
 {
-"412
+"416
 [v rand_tile@res res `uc  1 a 1 6 ]
-"411
+"415
 [v rand_tile@psrand_seed psrand_seed `uc  1 s 1 psrand_seed ]
-"426
+"430
 } 0
-"443
+"447
 [v _init init `T(v  1 e 1 0 ]
 {
-"471
+"475
 } 0
-"433
+"437
 [v _clearstr clearstr `(v  1 e 1 0 ]
 {
 [v clearstr@str str `*.4uc  1 a 1 wreg ]
 [v clearstr@str str `*.4uc  1 a 1 wreg ]
 [v clearstr@str str `*.4uc  1 a 1 0 ]
-"438
+"442
 } 0
-"392
+"396
 [v __beep _beep `(v  1 e 1 0 ]
 {
 [v __beep@PR2_val PR2_val `uc  1 a 1 wreg ]
 [v __beep@PR2_val PR2_val `uc  1 a 1 wreg ]
 [v __beep@CCPR1L_val CCPR1L_val `uc  1 p 1 0 ]
-"395
+"402
 [v __beep@PR2_val PR2_val `uc  1 a 1 1 ]
-"401
+"405
 } 0
 "109 D:\Dokumentumok\MPLABXProjects\PICGame.X\lcd_hd44780.c
 [v _LCD_wr_custom_char LCD_wr_custom_char `(v  1 e 1 0 ]
@@ -297,32 +297,32 @@
 [v LCD_waitbf@busy busy `uc  1 a 1 0 ]
 "87
 } 0
-"322 D:\Dokumentumok\MPLABXProjects\PICGame.X\main.c
+"326 D:\Dokumentumok\MPLABXProjects\PICGame.X\main.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"347
+"351
 [v isr@_key _key `uc  1 a 1 10 ]
-"346
+"350
 [v isr@_col _col `uc  1 a 1 8 ]
-"337
+"341
 [v isr@_row _row `uc  1 a 1 9 ]
-"324
+"328
 [v isr@prev_key prev_key `uc  1 s 1 prev_key ]
-"325
+"329
 [v isr@key_col_select key_col_select `uc  1 s 1 key_col_select ]
-"326
+"330
 [v isr@kbd_skip_t0_cyc kbd_skip_t0_cyc `uc  1 s 1 kbd_skip_t0_cyc ]
-"384
+"388
 } 0
-"392
+"396
 [v i1__beep _beep `(v  1 e 1 0 ]
 {
 [v i1__beep@PR2_val PR2_val `uc  1 a 1 wreg ]
 [v i1__beep@PR2_val PR2_val `uc  1 a 1 wreg ]
 [v i1__beep@CCPR1L_val CCPR1L_val `uc  1 p 1 0 ]
-"395
+"402
 [v i1__beep@PR2_val PR2_val `uc  1 a 1 1 ]
-"401
+"405
 } 0
 "11 D:\Dokumentumok\MPLABXProjects\PICGame.X\keypad.c
 [v _kbd_eval kbd_eval `(uc  1 e 1 0 ]
