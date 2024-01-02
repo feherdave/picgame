@@ -80,7 +80,7 @@ eeprom char eeprom_cgram_data[7][8] = {
 eeprom char tile_set[] = { ' ', 3, 3, 4, 4, 5, 5, 6 };      // Tile set for game B randomizer
 
 char key = '\0';                // Actually pressed key
-uint8_t beep_delay;             // Software timer for the beep function
+uint8_t beep_length;            // Software timer for the beep function
                                 // (decreased on every T0 interrupt)
 
 char gameA_line_buf[LCD_COLS + 1];  // Line buffer for game A
@@ -368,8 +368,8 @@ void __interrupt() isr() {
         // In case of beeping...
         if (CCPR1L) {
             // Decrease beep timer (a.k.a wait)
-            if (beep_delay) {
-                beep_delay--;
+            if (beep_length) {
+                beep_length--;
             } else {
                 // Stop beeping
                 CCPR1L = 0;
@@ -396,7 +396,7 @@ void __interrupt() isr() {
 void _beep(uint8_t PR2_val, uint8_t CCPR1L_val) {
 
     // Start beeping (for 6 T0 cycles)
-    beep_delay = 6;
+    beep_length = 6;
     PR2 = PR2_val;
     CCPR1L = CCPR1L_val;
 }
